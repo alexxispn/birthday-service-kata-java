@@ -31,7 +31,7 @@ Install dependencies:
 npm install
 ```
 
-Run the tests. The test framework is vitest. Running this script vitest will run and watch for changes
+Run the tests. The test framework is [vitest](https://vitest.dev/). Running this script, `vitest` will run and watch for changes.
 
 ```bash
 npm run test
