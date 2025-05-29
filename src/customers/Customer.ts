@@ -1,4 +1,4 @@
-import { EmailSender } from './EmailSender.js'
+import { EmailSender } from "../email/EmailSender"
 
 export class Customer {
   private readonly name: string

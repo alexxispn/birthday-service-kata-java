@@ -1,9 +1,9 @@
 import { describe, it } from 'vitest'
 import {BirthdayService} from "../src/BirthdayService";
-import {Customers} from "../src/Customers";
-import {ProductionEmailSender} from "../src/ProductionEmailSender";
-import {ProductionLogger} from "../src/ProductionLogger";
-import {Customer} from "../src/Customer";
+import {ProductionEmailSender} from "../src/email/ProductionEmailSender";
+import {ProductionLogger} from "../src/logger/ProductionLogger";
+import {Customer} from "../src/customers/Customer";
+import { ProductionCustomersRepository } from '../src/customers/ProductionCustomersRepository';
 
 
 /*
@@ -37,7 +37,7 @@ import {Customer} from "../src/Customer";
 describe('Birthday greetings', () => {
   it('should not send greeting emails if no customer has birthday today', () => {
     const service = new BirthdayService(
-      new Customers([]),
+      new ProductionCustomersRepository([]),
       new ProductionEmailSender(),
       new ProductionLogger(),
     )
@@ -46,7 +46,7 @@ describe('Birthday greetings', () => {
 
   it('should send greeting emails to all customers with birthday today', () => {
     const service = new BirthdayService(
-      new Customers([
+      new ProductionCustomersRepository([
         new Customer('John Doe', 'john@example.com', new Date('1990-02-14')),
         new Customer('Jane Doe', 'jane@example.com', new Date('2005-02-14')),
       ]),
@@ -56,4 +56,7 @@ describe('Birthday greetings', () => {
 
     service.greetCustomersWithBirthday(new Date())
   })
+
+  it.todo('does not throw if email sender fails', () => {})
+  it.todo('does not throw if repository fails', () => {})
 })

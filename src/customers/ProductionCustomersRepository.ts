@@ -1,6 +1,6 @@
 import { Customer } from './Customer.js'
 
-export class Customers {
+export class ProductionCustomersRepository {
   private readonly customers: Customer[]
 
   constructor(customers: Customer[]) {
