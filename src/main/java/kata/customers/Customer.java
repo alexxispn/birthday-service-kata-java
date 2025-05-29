@@ -1,21 +1,20 @@
 package kata.customers;
 
 import kata.email.EmailSender;
-
-import java.util.Date;
+import java.time.Instant;
 
 public class Customer {
     private final String name;
     private final String email;
-    private final Date birthday;
+    private final Instant birthday;
 
-    public Customer(String name, String email, Date birthday) {
+    public Customer(String name, String email, Instant birthday) {
         this.name = name;
         this.email = email;
         this.birthday = birthday;
     }
 
-    public boolean hasBirthday(Date aDate) {
+    public boolean hasBirthday(Instant aDate) {
         return birthday.equals(aDate);
     }
 
