@@ -6,6 +6,7 @@ import kata.discounts.DiscountCodeGenerator;
 import kata.email.EmailSender;
 import kata.logger.ProductionLogger;
 
+import java.time.Instant;
 import java.util.Date;
 
 public class BirthdayService {
@@ -22,7 +23,7 @@ public class BirthdayService {
         this.logger = logger;
     }
 
-    public void greetCustomersWithBirthday(Date today) {
+    public void greetCustomersWithBirthday(Instant today) {
         var customers = customerRepository.findWithBirthday(today);
         for (Customer customer : customers) {
             var discountCode = new DiscountCodeGenerator().generate();
