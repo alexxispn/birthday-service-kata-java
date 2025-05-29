@@ -1,4 +1,4 @@
-package main.java;
+package kata.discounts;
 
 public class DiscountCode {
     private final String code;

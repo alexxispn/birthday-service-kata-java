@@ -1,6 +1,5 @@
-package main.java;
+package kata.customers;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

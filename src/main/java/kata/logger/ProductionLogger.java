@@ -1,4 +1,4 @@
-package main.java;
+package kata.logger;
 
 public class ProductionLogger {
     public void log(String level, String message) {

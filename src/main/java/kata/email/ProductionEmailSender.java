@@ -1,4 +1,4 @@
-package main.java;
+package kata.email;
 
 public class ProductionEmailSender implements EmailSender {
     @Override

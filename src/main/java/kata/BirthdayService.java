@@ -1,4 +1,10 @@
-package main.java;
+package kata;
+
+import kata.customers.Customer;
+import kata.customers.ProductionCustomersRepository;
+import kata.discounts.DiscountCodeGenerator;
+import kata.email.EmailSender;
+import kata.logger.ProductionLogger;
 
 import java.util.Date;
 
@@ -23,7 +29,7 @@ public class BirthdayService {
             var template = "Happy birthday, {name}! Here is your discount code: {discount}"
                     .replace("{discount}", discountCode.getCode());
             customer.sendEmail(template, emailSender);
-            logger.log("INFO", customer.fillWithEmail("Email sent to {email}"));
+            logger.log("INFO", customer.fillWithEmail("Email sent to {kata.email}"));
         }
     }
 } 

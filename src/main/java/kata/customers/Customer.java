@@ -1,4 +1,6 @@
-package main.java;
+package kata.customers;
+
+import kata.email.EmailSender;
 
 import java.util.Date;
 
@@ -23,6 +25,6 @@ public class Customer {
     }
 
     public String fillWithEmail(String template) {
-        return template.replace("{email}", email);
+        return template.replace("{kata.email}", email);
     }
 } 

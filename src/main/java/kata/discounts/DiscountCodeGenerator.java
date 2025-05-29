@@ -1,4 +1,4 @@
-package main.java;
+package kata.discounts;
 
 import java.util.Random;
 
