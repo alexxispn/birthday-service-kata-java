@@ -44,12 +44,7 @@ class BirthdayGreetingsTest {
     }
 
     @Test
-    void doesNotThrowIfEmailSenderFails() {
+    void sendsAMessageWithTheDiscountCode() {
         // TODO: Implement test
     }
-
-    @Test
-    void doesNotThrowIfRepositoryFails() {
-        // TODO: Implement test
-    }
-} 
+}

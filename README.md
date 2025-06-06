@@ -6,10 +6,10 @@ This is an exercise to practice how to introduce and use test doubles. It's writ
 
 We have a BirthdayService that runs every day via a cron job
 
-* It greets kata.customers with has birthday on that day.
+* It greets customers with has birthday on that day.
 * It generates a discount code for them.
-* It sends an kata.email to them with the discount code.
-* It logs the kata.email sent.
+* It sends an email to them with the discount code.
+* It logs the email sent.
 
 Your work is to write the required tests for this functionality. You probably will need to modify the code to make it testable and use different test doubles for the dependencies.
 
@@ -19,8 +19,8 @@ Add assertions to the test that matches the intent of the test.
 
 ## Enrich the exercise by adding more tests:
 
-* Ensure that the kata.email sent is correct and it is sent to the correct customer
-* Make a test to ensure that the service fails gracefully if the kata.email sending fails
+* Ensure that the email sent is correct and it is sent to the correct customer
+* Make a test to ensure that the service fails gracefully if the email sending fails
 * Make a test to ensure that the service fails gracefully if the repository fails
 
 ## How to start
